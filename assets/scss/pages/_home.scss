@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding-top:5rem;
+     background-image: linear-gradient(166deg,$black, $jaune, rgb(0, 0, 0), $jaune 90%);
+}
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.header {
+
+    width: 100%;
+    height: auto;
+    padding: 1rem 0 1rem 0;
+
+    .navigation {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+         position: fixed;
+            z-index: 10000;
+            top: 0;
+            left: 0;
+
+
+        .nav {
+            width: 40%;
+            height: auto;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 2px solid $gold;
+            background-color: rgba(255, 217, 0, 0.432);
+          
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+
+                li {
+                    a {
+                        display: block;
+                        border: 2px solid $black;
+                        border-radius: 0.7rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.7rem;
+                        color: $white;
+
+                        &:focus {
+                            border: 2px solid $gold;
+                            outline: none;
+                            box-shadow: 0 0 7px $gold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .titre {
+        width: 80%;
+        padding: 1rem;
+        // background-color: blue;
+         background-color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 1rem auto auto auto;
+        border-radius: 1rem;
+        // border: 2px solid aqua;
+
+        h1 {
+            font-size:2rem;
+            color: $white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            span{
+                color: $gold;
+                font-size: 2.5rem;
+            }
+
+        }
+
+        .images{
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            background-color: $gold;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+
+
+.acceuil {
+    width: 100%;
+    height:auto;
+    padding: 1rem;
+    background-color:$black;
+
+
+
+
+    &-home {
+        width: 90%;
+        margin: auto;
+        background-color: $black;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        // border: 2px solid $gold;
+        // border-radius: 1rem;
+        // padding: 0.5rem;
+
+
+        .pcDesc{
+            width: 50%;
+            height: 20rem;
+            padding: 1rem 1rem 1rem 5rem;
+            background-color: $black2;
+            border-bottom-left-radius: 1rem;
+            border-top-left-radius: 1rem;
+
+            h2{
+                color: $white;
+                margin: 0 0 1rem 0;
+
+                span{
+                    color: $gold;
+                    font-size: 1.7rem;
+                }
+            }
+
+            h4{
+                font-size: 1.3rem;
+                color: $white;
+            }
+
+            button{
+                @include btn;
+            }
+        }
+
+        .pcImg{
+            width:50%;
+            height: 15rem;
+            background-color: $black;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+
+    }
+}
+
+.footer{
+   @include footer;
+}
